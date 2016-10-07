@@ -1,0 +1,37 @@
+<html ng-app = "flytta" >
+<head>
+<title> Flytta Test  </title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"> </script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"> </script>
+<script src = "core.js">  </script>
+<script>
+function validate()
+{
+  if ((/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myf.uname.value)) && (/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/.test(myf.pass.value) ))
+  {  
+    return (true)  
+  }  
+    alert("Validation failed")  
+    return (false) 
+}
+</script>
+</head>
+<body ng-controller = "maincontroller" >
+<center> <h1> 	Welcome to Flytta</h1>  </center>
+<br>
+<br>
+<div>
+<form name = "myf" >
+Username : <input type = "text" name = "uname" ng-model = "formD.tex">
+<br><br>
+Password : <input type= "password" name = "pass" ng-model = "formD.pass">
+<br><br>
+<button  type = "submit" onclick = "return validate()" ng-click = "postflytta()">Submit </button>
+
+</form>
+
+</div>
+
+
+</body>
+</html>
